@@ -10,14 +10,15 @@ import SwiftUI
 struct ContentView: View {
     //Add your variables here ضيفوا المتغيرات اهني
     
-    
+    @State var username : String = ""
     var body: some View {
         VStack(spacing:40){
             //Change the username to the new variable .. غيروا كلمة username الى المتغير الجديد
-            Text("Welcome Back username!")
+            Text("Welcome Back \(username)!")
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.medium)
                 .foregroundColor(Color(red: 0.167, green: 0.152, blue: 0.229))
+          TextField("username", text: $username)
             Image("coding")
                 .resizable()
                 .scaledToFit()
